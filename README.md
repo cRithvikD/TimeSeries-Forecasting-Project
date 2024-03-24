@@ -20,7 +20,7 @@ training set. The prediction accuracy will be measured using RMSE.
 
 As part of this analysis, we have fitted different models like SARIMAX, Theta, and Prophet.
 
-1. First off, we started by estimating the p,d,q,P,D,Q,m values from the ACF and PACF plots, and used the ADF test to understand if its stationary. After fitting the SARIMAX model, we get the best model as SARIMAX((0, 0, 1)), ((6, 0, 3, 21)) with an RMSE: 290.7818112299762
+1. First off, we started by estimating the p,d,q,P,D,Q,m values from the ACF and PACF plots, and used the ADF test to understand if it is stationary. After fitting the SARIMAX model, we get the best model as SARIMAX((0, 0, 1)), ((6, 0, 3, 21)) with an RMSE: 290.7818112299762
    
 2. Next, we fit a theta model with a period of 31 days, however the RMSE wa 240.1, not much of an improvement
    
