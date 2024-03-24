@@ -16,8 +16,15 @@ the mean daily wind power that could be generated from the windmill for the next
 days. The target variable indicating the wind power is the column ‘ActivePower’ in the
 training set. The prediction accuracy will be measured using RMSE.
 
+## The analysis: 
+
 As part of this analysis, we have fitted different models like SARIMAX, Theta, and Prophet.
-Using Prophet gives us an RMSE of 183.3 on the training data, which we have used as part of our final submission!
+
+1. First off, we started by estimating the p,d,q,P,D,Q,m values from the ACF and PACF plots, and used the ADF test to understand if its stationary. After fitting the SARIMAX model, we get the best model as SARIMAX((0, 0, 1)), ((6, 0, 3, 21)) with an RMSE: 290.7818112299762
+   
+2. Next, we fit a theta model with a period of 31 days, however the RMSE wa 240.1, not much of an improvement
+   
+3. Finally, fitting a Prophet model with a period=21 and fourier order=1 gave us an RMSE of 183.3 on the training data, and this is what we have used as part of our final submission!
 
 ## Acknowledgements:
 1. Thanks to Dr. Shan Wang for organizing this competition as part of the 'MSDS 604: Time Series Analysis' course at USFCA!
